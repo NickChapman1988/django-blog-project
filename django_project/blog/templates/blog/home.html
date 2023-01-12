@@ -3,19 +3,20 @@
 
 {% block page_header %}
 <nav class="navbar navbar-expand-lg bg-dark bg-gradient">
-    <div class="container-fluid">
-        <a class="navbar-brand text-white-50" href="#">Django Blog</a>
-        <button class="navbar-toggler bg-body-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
-            aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo02">
-          <form class="d-flex" role="form">
-            <a href="#" class="btn btn-success mx-2" role="button">Sign In</a>
-            <a href="#" class="btn btn-success mx-2" role="button">Register</a>
-          </form>
-        </div>
+  <div class="container-fluid">
+    <a class="navbar-brand text-white-50" href="#">Django Blog</a>
+    <button class="navbar-toggler bg-body-secondary" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo02">
+      <form class="d-flex" role="form">
+        <a href="#" class="btn btn-success mx-2" role="button">Sign In</a>
+        <a href="#" class="btn btn-success mx-2" role="button">Register</a>
+      </form>
     </div>
+  </div>
 </nav>
 {% endblock %}
 
@@ -28,26 +29,22 @@
     </div>
   </div>
 <div class="container py-4">
-      <!-- Example row of columns -->
-      <div class="row">
-        <div class="col-md-4">
-          <h2>Business</h2>
-          <p><a class="btn bg-gradient btn-outline-secondary" href="#" role="button">View details &raquo;</a></p>
-        </div>
-        <div class="col-md-4">
-          <h2>Sports</h2>
-          <p><a class="btn bg-gradient btn-outline-secondary" href="#" role="button">View details &raquo;</a></p>
-       </div>
-        <div class="col-md-4">
-          <h2>Entertainment</h2>
-          <p><a class="btn bg-gradient btn-outline-secondary" href="#" role="button">View details &raquo;</a></p>
-        </div>
-      </div>
+  <!-- Example row of columns -->
+  <div class="row">
+    <div class="col-md-4">
+      <h2>Business</h2>
+      <p><a class="btn bg-gradient btn-outline-secondary" href="#" role="button">View details &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+      <h2>Sports</h2>
+      <p><a class="btn bg-gradient btn-outline-secondary" href="#" role="button">View details &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+      <h2>Entertainment</h2>
+      <p><a class="btn bg-gradient btn-outline-secondary" href="#" role="button">View details &raquo;</a></p>
+    </div>
+  </div>
 
-      <hr>
-
-      <footer>
-        <p>&copy; Company 2015</p>
-      </footer>
-    </div> <!-- /container -->
+  <hr>
+</div>
 {% endblock %}
