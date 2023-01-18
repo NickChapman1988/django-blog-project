@@ -37,17 +37,19 @@
         </div>
       </nav>
     </header>  
-    
+
     <main>
       {% block content %}
       {% endblock %}
     </main>
 
+    {% block footer %}
     <footer>
       <div class="my-2 p-2 footer-div">
         <p>&copy; Company 2015</p>
       </div>
     </footer>
+    {% endblock %}
 
     {% block corejs %}
     <!-- Bootstrap JS -->
