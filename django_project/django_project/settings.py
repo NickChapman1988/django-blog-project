@@ -26,8 +26,9 @@ SECRET_KEY = 'django-insecure-ipuf(%5e0qi$b&s_^f-wy&%9)ed9g=&lspjx&6388fm9&y^6zl
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost']
 
+CSRF_TRUSTED_ORIGINS = ['https://8000-nickchapman-djangoblogp-0o3r2mx4ogq.ws-eu83.gitpod.io']
 
 # Application definition
 
