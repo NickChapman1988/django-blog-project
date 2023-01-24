@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+    <form method="POST" action="">
+        {% csrf_token %}
+        <fieldset class="form-group">
+            <legend>Join Now!</legend>
+            {{ form }}
+        </fieldset>
+        <div class="form-group">
+            <button type="submit">Sign Up</button>
+        </div>
+    </form>
+    <div>
+        <small>
+            Already have an account? <a href="#">Sign In</a>
+        </small>
+    </div>
+</div>
+{% endblock content %}
+
+{% block footer %}
+{% endblock %}
