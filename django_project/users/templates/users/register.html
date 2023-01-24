@@ -7,7 +7,7 @@
         {% csrf_token %}
         <fieldset class="form-group">
             <legend>Join Now!</legend>
-            {{ form }}
+            {{ form.as_p }}
         </fieldset>
         <div class="form-group">
             <button type="submit">Sign Up</button>
