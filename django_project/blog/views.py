@@ -8,7 +8,7 @@ def index(request):
 
 posts = [
     {
-        'author': 'Loonycorn',
+        'author': 'Loonycon',
         'title': 'Blog Post 1',
         'content': 'First post content',
         'date_posted': 'October 25, 2019'
