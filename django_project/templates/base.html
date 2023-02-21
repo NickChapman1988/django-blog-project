@@ -29,10 +29,16 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo02">
-            <form class="d-flex" role="form">
-              <a href="#" class="btn btn-success mx-2" role="button">Sign In</a>
-              <a href="#" class="btn btn-success mx-2" role="button">Register</a>
-            </form>
+            {% if user.is_authenticated %}
+              <form role="form" class="navbar-form navbar-right">
+                <a href="{% url 'logout' %}" class="btn btn-success" role="button">Sign Out</a>
+              </form>
+            {% else %}
+              <form class="d-flex" role="form">
+                <a href="{% url 'login' %}" class="btn btn-success mx-2" role="button">Sign In</a>
+                <a href="{% url 'register' %}" class="btn btn-success mx-2" role="button">Register</a>
+              </form>
+            {% endif %}
           </div>
         </div>
       </nav>
