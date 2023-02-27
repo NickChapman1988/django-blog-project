@@ -7,18 +7,19 @@ Welcome
 
 {% block content %}
 <div class="bg-body-secondary py-4">
-    <div class="container">
-      <h1 class="display1">Welcome to Amazing Blogs!</h1>
-      <p>Raise your thoughts, not your voice</p>
-      <p><a class="btn btn-primary bg-gradient btn-lg" href="#" role="button">Learn more &raquo;</a></p>
-    </div>
+  <div class="container">
+    <h1 class="display1">Welcome to Amazing Blogs!</h1>
+    <p>Raise your thoughts, not your voice</p>
+    <p><a class="btn btn-primary bg-gradient btn-lg" href="#" role="button">Learn more &raquo;</a></p>
   </div>
+</div>
+{% if user.is_authenticated %}
 <div class="container py-4">
-  <!-- Example row of columns -->
   <div class="row">
     <div class="col-md-4">
       <h2>Business</h2>
-      <p><a class="btn bg-gradient btn-outline-secondary" href="{% url 'business' %}" role="button">View details &raquo;</a></p>
+      <p><a class="btn bg-gradient btn-outline-secondary" href="{% url 'business' %}" role="button">View details
+          &raquo;</a></p>
     </div>
     <div class="col-md-4">
       <h2>Sports</h2>
@@ -29,7 +30,11 @@ Welcome
       <p><a class="btn bg-gradient btn-outline-secondary" href="#" role="button">View details &raquo;</a></p>
     </div>
   </div>
-
-  <hr>
+{% else %}
+  <div class="container py-4">
+    <h4>Create an account to view and post awesome blogs</h4>
+  </div>
 </div>
+{% endif %}
+<hr>
 {% endblock %}
