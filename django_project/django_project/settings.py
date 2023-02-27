@@ -28,7 +28,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['localhost']
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-nickchapman-djangoblogp-0o3r2mx4ogq.ws-eu87.gitpod.io']
+CSRF_TRUSTED_ORIGINS = ['https://8000-nickchapman-djangoblogp-0o3r2mx4ogq.ws-eu88.gitpod.io']
 
 # Application definition
 
