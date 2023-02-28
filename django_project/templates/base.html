@@ -31,13 +31,13 @@
           <div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo02">
             {% if user.is_authenticated %}
               <form role="form" class="navbar-form navbar-right">
-                <a href="{% url 'profile' %}" class="btn btn-success" role="button">Profile</a>
-                <a href="{% url 'logout' %}" class="btn btn-success" role="button">Sign Out</a>
+                <a href="{% url 'profile' %}" class="btn btn-primary bg-gradient" role="button">Profile</a>
+                <a href="{% url 'logout' %}" class="btn btn-primary bg-gradient" role="button">Sign Out</a>
               </form>
             {% else %}
               <form class="d-flex" role="form">
-                <a href="{% url 'login' %}" class="btn btn-success mx-2" role="button">Sign In</a>
-                <a href="{% url 'register' %}" class="btn btn-success mx-2" role="button">Register</a>
+                <a href="{% url 'login' %}" class="btn btn-primary bg-gradient mx-2" role="button">Sign In</a>
+                <a href="{% url 'register' %}" class="btn btn-primary bg-gradient mx-2" role="button">Register</a>
               </form>
             {% endif %}
           </div>
