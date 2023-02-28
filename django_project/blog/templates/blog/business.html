@@ -24,14 +24,11 @@
     </section>
 
     <section class="container">
-        <form action="" method="post">
-            <p>Please submit your blog:
-                <input type="text" name="url">
-            </p>
-            <p>
-                <button type="submit">Submit</button>
-            </p>
-        </form>
+        <div>
+            <section>
+                <a href="{% url 'post-create' %}">Click here to create a new blog post</a>
+            </section>
+        </div>
     </section>
 {% endblock %}
 
