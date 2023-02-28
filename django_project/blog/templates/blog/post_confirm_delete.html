@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+    <form method="POST" action="">
+        {% csrf_token %}
+        <fieldset>
+            <legend>Delete Post</legend>
+            <h4>Are you sure you want to delete post "{{ object.title }}"?</h4>
+        </fieldset>
+        <div>
+            <button type="submit" class="btn btn-danger">Yes, Delete</button>
+            <a href="{% url 'post-detail' object.id %}" role="button" class="btn btn-default">Cancel</a>
+        </div>
+    </form>
+</div>
+{% endblock %}
