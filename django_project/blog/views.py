@@ -4,6 +4,7 @@ from .models import Post
 from django.views.generic import ListView, DetailView, CreateView, UpdateView
 from django.views.generic import DeleteView
 from django.contrib.auth.mixins import UserPassesTestMixin
+from django.views.generic.dates import YearArchiveView
 
 
 def index(request):
@@ -61,3 +62,10 @@ class PostDeleteView(UserPassesTestMixin, DeleteView):
         if self.request.user == post.author:
             return True
         return False
+
+
+class PostYearArchiveView(YearArchiveView):
+    queryset = Post.objects.all()
+    date_field = "date_posted"
+    make_object_list = True
+    allow_future = True

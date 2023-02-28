@@ -7,7 +7,7 @@ from django.contrib.auth import views as auth_views
 from django.conf import settings
 from django.conf.urls.static import static
 from .views import PostListView, PostDetailView, PostCreateView
-from .views import PostUpdateView, PostDeleteView
+from .views import PostUpdateView, PostDeleteView, PostYearArchiveView
 from django.views.generic.dates import ArchiveIndexView
 from blog.models import Post
 
@@ -27,6 +27,8 @@ urlpatterns = [
     path('post/<int:pk>/delete', PostDeleteView.as_view(), name='post-delete'),
     path('archive/', ArchiveIndexView.as_view(
         model=Post, date_field="date_posted"), name="post_archive"),
+    path('<int:year>/', PostYearArchiveView.as_view(),
+         name="post_year_archive"),
 ]
 
 if settings.DEBUG:

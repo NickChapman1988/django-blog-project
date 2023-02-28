@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+Archive Blog
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <section>
+        <div>
+            <h1>All Posts for {{ year|date:"Y" }}</h1>
+            {% for obj in object_list %}
+            <p>
+                <li><a href="{% url 'post-detail' obj.id %}">{{ obj.title }} - {{ obj.date_posted|date:"F j, Y" }}</a></li>
+            </p>
+            {% endfor %}
+        </div>
+    </section>
+</div>
+{% endblock %}
+
+{% block footer %}
+{% endblock %}
