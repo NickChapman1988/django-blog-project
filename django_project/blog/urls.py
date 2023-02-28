@@ -29,6 +29,7 @@ urlpatterns = [
         model=Post, date_field="date_posted"), name="post_archive"),
     path('<int:year>/', PostYearArchiveView.as_view(),
          name="post_year_archive"),
+    path('about/', views.about, name='about'),
 ]
 
 if settings.DEBUG:
