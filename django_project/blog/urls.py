@@ -6,7 +6,10 @@ from users import views as user_views
 from django.contrib.auth import views as auth_views
 from django.conf import settings
 from django.conf.urls.static import static
-from .views import PostListView, PostDetailView, PostCreateView, PostUpdateView, PostDeleteView
+from .views import PostListView, PostDetailView, PostCreateView
+from .views import PostUpdateView, PostDeleteView
+from django.views.generic.dates import ArchiveIndexView
+from blog.models import Post
 
 
 urlpatterns = [
@@ -22,6 +25,8 @@ urlpatterns = [
     path('post/new/', PostCreateView.as_view(), name='post-create'),
     path('post/<int:pk>/update', PostUpdateView.as_view(), name='post-update'),
     path('post/<int:pk>/delete', PostDeleteView.as_view(), name='post-delete'),
+    path('archive/', ArchiveIndexView.as_view(
+        model=Post, date_field="date_posted"), name="post_archive"),
 ]
 
 if settings.DEBUG:
