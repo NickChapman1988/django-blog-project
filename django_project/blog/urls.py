@@ -4,7 +4,7 @@ from users import views as user_views
 from django.contrib.auth import views as auth_views
 from django.conf import settings
 from django.conf.urls.static import static
-from .views import PostListView, PostDetailView, PostCreateView
+from .views import PostListView, PostDetailView, PostCreateView, PostUpdateView
 
 
 urlpatterns = [
@@ -18,6 +18,7 @@ urlpatterns = [
     path('profile/', user_views.profile, name='profile'),
     path('post/<int:pk>/', PostDetailView.as_view(), name='post-detail'),
     path('post/new/', PostCreateView.as_view(), name='post-create'),
+    path('post/<int:pk>/update', PostUpdateView.as_view(), name='post-update'),
 ]
 
 if settings.DEBUG:
