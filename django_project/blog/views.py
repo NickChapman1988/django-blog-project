@@ -54,6 +54,7 @@ class PostUpdateView(UserPassesTestMixin, UpdateView):
 
 class PostDeleteView(UserPassesTestMixin, DeleteView):
     model = Post
+    success_url = '/'
 
     def test_func(self):
         post = self.get_object()

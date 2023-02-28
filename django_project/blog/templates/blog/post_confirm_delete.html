@@ -11,8 +11,10 @@
         </fieldset>
         <div>
             <button type="submit" class="btn btn-danger">Yes, Delete</button>
-            <a href="{% url 'post-detail' object.id %}" role="button" class="btn btn-default">Cancel</a>
+            <a href="{% url 'post-detail' object.id %}" role="button" class="btn btn-light">Cancel</a>
         </div>
     </form>
 </div>
+{% endblock %}
+{% block footer %}
 {% endblock %}
