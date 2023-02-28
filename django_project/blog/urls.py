@@ -4,7 +4,7 @@ from users import views as user_views
 from django.contrib.auth import views as auth_views
 from django.conf import settings
 from django.conf.urls.static import static
-from .views import PostListView, PostDetailView
+from .views import PostListView, PostDetailView, PostCreateView
 
 
 urlpatterns = [
@@ -17,6 +17,7 @@ urlpatterns = [
         template_name='users/logout.html'), name='logout'),
     path('profile/', user_views.profile, name='profile'),
     path('post/<int:pk>/', PostDetailView.as_view(), name='post-detail'),
+    path('post/new/', PostCreateView.as_view(), name='post-create'),
 ]
 
 if settings.DEBUG:
