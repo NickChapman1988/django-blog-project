@@ -1,16 +1,17 @@
 {% extends "base.html" %}
 {% load static %}
+{% load crispy_forms_tags %}
 
 {% block content %}
 <div class="container py-4">
     <div class="row">
-        <div class="col-xs-12 col-sm-6 col-md-6">
-            <div class="border rounded p-3 pe-5 bg-success-subtle">
+        <div class="col col-sm-10 col-md-8">
+            <div class="border rounded p-3 bg-success-subtle">
                 <div class="row">
-                    <div class="col-sm-6 col-md-4">
+                    <div class="d-sm-flex justify-content-center col-sm-6 col-md-4">
                         <img src="{{ user.profile.image.url }}" alt="" class="img-fluid rounded"/>
                     </div>
-                    <div class="col-sm-6 col-md-8 align-items-center">
+                    <div class="d-flex flex-column justify-content-center col-sm-6 col-md-8">
                         <h4>{{ user.username }}</h4>
                         <p>
                             <i class="bi bi-envelope-at-fill"></i> {{ user.email }}
@@ -20,7 +21,20 @@
             </div>
         </div>
     </div>
+    <hr>
+    <form method="POST" enctype="multipart/form-data" action="">
+        {% csrf_token %}
+        <fieldset class="form-group">
+            <legend>Profile Info</legend>
+            {{ u_form|crispy }}
+            {{ p_form|crispy }}
+        </fieldset>
+        <div class="form-group">
+            <button type="submit">Update</button>
+        </div>        
+    </form>
 </div>
 {% endblock %}
+
 {% block footer %}
 {% endblock %}
